@@ -1,6 +1,15 @@
 import os
 import subprocess
-subprocess.call(["pip", "install", "pytube"])
+import time
+subprocess.call(["pip", "install", "--upgrade", "pip"])
+try:
+    subprocess.check_output(
+    "pytube --version",
+    stderr = subprocess.STDOUT,
+    shell= True
+    )
+except:
+    subprocess.call(["pip", "install", "pytube"])
 import pytube
 from tkinter import *
 
@@ -48,12 +57,14 @@ class Application:
         self.baixar["text"] = "Baixar Música"
         self.baixar["font"] = ("Calibri", "13")
         self.baixar["width"] = 12
+        self.baixar["command"]
         self.baixar["command"] = self.searchMusic
         self.baixar.pack()
 
     def searchMusic(self):
+        self.titulo["text"] = "Procurando Música:"
+        time.sleep(2)
         videoLink = self.link.get()
-
         yt = pytube.YouTube(videoLink)
         vids = yt.streams
         parent_dir = r"D:\Bruno\Musics\Pytube"
@@ -62,9 +73,9 @@ class Application:
             music = vids[i].mime_type
             if (music == "audio/mp4"):
                 music = vids[i]
+                self.titulo["text"] = "Baixando Música:"
                 music.download(parent_dir)
                 break
-
         default_filename = music.default_filename  # get default name using pytube API
         size = len(default_filename)
         new_filename = default_filename[0:(size-4)] + ".mp3"
