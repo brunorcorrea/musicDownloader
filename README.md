@@ -10,5 +10,3 @@
 * [FFmpeg](https://github.com/GyanD/codexffmpeg/releases/download/2021-02-02-git-2367affc2c/ffmpeg-2021-02-02-git-2367affc2c-full_build.zip)
 
 * [Python](https://www.python.org/downloads/)
-
-![cmd](https://i.imgur.com/lY4b9Z5.png)
