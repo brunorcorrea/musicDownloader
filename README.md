@@ -4,6 +4,10 @@
 
 <br/>
 
+**As músicas serão baixadas no mesmo diretório onde o baixador está!**
+
+<br/>
+
 ### Para usá-lo é necessário instalar os seguintes programas
 
 * [FFmpeg](https://www.gyan.dev/ffmpeg/builds/ffmpeg-git-full.7z)
