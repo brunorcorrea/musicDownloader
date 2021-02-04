@@ -7,4 +7,4 @@
 
 * [FFmpeg](https://www.ffmpeg.org/download.html)
 
-* [Python](Shttps://www.python.org/downloads/)
+* [Python](https://www.python.org/downloads/)
