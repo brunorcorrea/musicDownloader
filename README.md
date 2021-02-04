@@ -7,4 +7,6 @@
 
 * [FFmpeg](https://www.ffmpeg.org/download.html)
 
+* [FFmpeg](https://github.com/GyanD/codexffmpeg/releases/download/2021-02-02-git-2367affc2c/ffmpeg-2021-02-02-git-2367affc2c-full_build.zip)
+
 * [Python](https://www.python.org/downloads/)
