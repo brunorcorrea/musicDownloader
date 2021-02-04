@@ -1,8 +1,6 @@
 # musicDownloader
 
-## Baixador de música criado com [Pytube](https://pypi.org/project/pytube/), e interface desenvolvida usando Tkinter
-
-<br/>
+**Baixador de música criado com [Pytube](https://pypi.org/project/pytube/), e interface desenvolvida usando Tkinter. As músicas serão baixadas no mesmo diretório onde o baixador está!**
 
 ### Para usá-lo é necessário instalar os seguintes programas
 
