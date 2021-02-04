@@ -44,7 +44,7 @@ class Application:
         self.sair["command"] = self.primeiroContainer.quit
         self.sair.pack(side=RIGHT)
 
-        self.titulo = Label(self.primeiroContainer, text="Insira o link do vídeo: ")
+        self.titulo = Label(self.primeiroContainer, text= "Insira o link da música:")
         self.titulo["font"] = ("Arial", 15,"bold")
         self.titulo.pack()
 
@@ -63,11 +63,10 @@ class Application:
 
     def searchMusic(self):
         self.titulo["text"] = "Procurando Música:"
-        time.sleep(2)
         videoLink = self.link.get()
         yt = pytube.YouTube(videoLink)
         vids = yt.streams
-        parent_dir = r"D:\Bruno\Musics\Pytube"
+        parent_dir = os.path.dirname(os.path.realpath(__file__)) + "/baixadas/"
 
         for i in range(len(vids)):
             music = vids[i].mime_type
@@ -85,7 +84,7 @@ class Application:
         os.path.join(parent_dir, new_filename)
         ])
 
-        full_path = "D:\\Bruno\\Musics\Pytube\\" + default_filename
+        full_path = parent_dir + default_filename
         os.remove(full_path)
 
         self.titulo["text"] = "Música Baixada com sucesso"
